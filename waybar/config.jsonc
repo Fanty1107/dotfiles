@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "width": 1200,
+    "modules-left": [
+        "pulseaudio",
+         "custom/cava"
+        ],
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces",
+        "clock#right"
+    ],
+    "modules-right": [
+    "mpris"
+    ],
+
+    "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player": "playerctld",
+    "max-length": 20,
+    "on-click": "playerctl play-pause",
+    "player-icons": {
+        "default": "",
+        "spotify": "",
+        "mpv": ""
+    },
+    "status-icons": {
+        "paused": "⏸",
+        "playing": "▶"
+    }
+    },   
+    "clock": {
+        "format": "{:%H}H"
+    },
+    "clock#right":{
+        "format": "{:%M}m"
+    },
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+		"5": ""
+	    }
+    },
+    "pulseaudio": {
+	"format": "{icon} {volume}%",
+	"format-bluetooth": "{volume}%",
+	"format-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "󰂑",
+		"headset": "󰂑",
+		"phone": "",
+		"phone-muted": "",
+		"portable": "",
+		"car": "",
+		"default": ["󰕿", "󰕾"]
+	},
+	"scroll-step": 1,
+	"on-click": "pavucontrol"
+    },
+
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "restart-interval": 1,
+        "tooltip": false
+    }
+ }
