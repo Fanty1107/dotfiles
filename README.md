@@ -1,1 +1,2 @@
 # dotfiles
+without caelestia shell
