@@ -1,0 +1,13 @@
+#configurados
+wofi --show drun -tem config
+waybar - tem config
+starship.toml
+awww -não tem config
+waypaper - tem config
+mako - tem config
+
+#falta configur
+hyprlock para "trancar" a sessão
+hypridle para identificar inatividade
+hyprshot para screenshot or recording
+hyprshade para filtros de tela
