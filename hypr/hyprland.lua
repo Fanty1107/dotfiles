@@ -1,0 +1,16 @@
+require("modules.monitors")
+require("modules.programs")
+require("modules.autostart")
+require("modules.env")
+require("modules.vars")
+require("modules.animations")
+require("modules.workspaceRules")
+require("modules.input")
+require("modules.misc")
+require("modules.permissions")
+require("modules.layout")
+require("modules.keybinds")
+require("modules.windowRules")
+
+-- HyprMod managed settings
+require("hyprland-gui")
