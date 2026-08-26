@@ -7,15 +7,18 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(Programs.terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(
-	mainMod .. " + M",
+	mainMod .. " + SHIFT + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(Programs.musicPlayer))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(Programs.codeEditor))
+hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(Programs.wallpicker))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(Programs.fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(Programs.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + H", hl.dsp.exec_cmd(Programs.menu))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(Programs.browser))
 
 -- Move focus with mainMod + arrow keys

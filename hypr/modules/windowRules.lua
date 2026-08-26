@@ -47,6 +47,7 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
+hl.window_rule({ match = { class = "waypaper" }, float = true })
 hl.window_rule({ match = { class = "org.kde.dolphin" }, float = true })
 hl.window_rule({ match = { class = "Spotify" }, workspace = "special:spotify" })
 
@@ -65,4 +66,11 @@ hl.window_rule({
 	border_size = 0,
 	rounding = 0, -- desliga bordas arredondadas
 	no_anim = true, -- desliga animações da janela
+})
+hl.window_rule({
+	match = { fullscreen = true },
+	no_blur = true,
+	no_shadow = true,
+	no_anim = true,
+	opacity = "1.0 override",
 })
