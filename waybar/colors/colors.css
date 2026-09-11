@@ -25,6 +25,5 @@
 @define-color mantle #181825;
 @define-color crust #11111b;
 
-@define-color foreground @lavender;
-@define-color background @overlay3;
-
+@define-color foreground #cba6f7;
+@define-color background @crust;
