@@ -13,7 +13,7 @@ hl.config({
 		smart_split = false,
 	},
 	general = {
-		border_size = 2,
+		border_size = 1,
 	},
 	input = {
 		repeat_delay = 400,

@@ -5,9 +5,9 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		gaps_in = 10,
-		gaps_out = 15,
-
+		gaps_in = 7,
+		gaps_out = 10,
+		--alter border_size in hyprland-gui.lua
 		border_size = 2,
 
 		col = {
@@ -25,8 +25,8 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 0,
-		rounding_power = 2,
+		rounding = 15,
+		rounding_power = 10,
 
 		-- Change transparency of focused and unfocused windows
 		active_opacity = 0.95,
@@ -34,16 +34,16 @@ hl.config({
 
 		shadow = {
 			enabled = true,
-			range = 4,
-			render_power = 3,
+			range = 8,
+			render_power = 5,
 			color = "#45475a",
 		},
 
 		blur = {
 			enabled = true,
-			size = 6,
-			passes = 2,
-			vibrancy = 0.1696,
+			size = 7,
+			passes = 3,
+			vibrancy = 5,
 		},
 	},
 

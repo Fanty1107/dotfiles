@@ -8,7 +8,7 @@ Programs = {
 	musicPlayer = "spotify",
 	fileManager = "dolphin",
 	menu = "wofi --show drun",
-	browser = "zen-browser",
+	browser = "librewolf",
 	wallpicker = "waypaper",
 	codeEditor = "zeditor",
 }
