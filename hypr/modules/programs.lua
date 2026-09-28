@@ -6,9 +6,9 @@
 Programs = {
 	terminal = "kitty",
 	musicPlayer = "spotify",
-	fileManager = "dolphin",
+	fileManager = "kitty -e yazi",
 	menu = "wofi --show drun",
 	browser = "librewolf",
 	wallpicker = "waypaper",
-	codeEditor = "zeditor",
+	codeEditor = "kitty -e nvim",
 }
