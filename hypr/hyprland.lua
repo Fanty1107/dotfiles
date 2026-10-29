@@ -16,3 +16,7 @@ require("modules.windowRules")
 require("hyprland-gui")
 
 
+
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

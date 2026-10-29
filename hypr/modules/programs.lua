@@ -6,9 +6,10 @@
 Programs = {
 	terminal = "kitty",
 	musicPlayer = "spotify-launcher",
-	fileManager = "nemo",
-	menu = "wofi --show drun",
-	browser = "brave-origin-nightly",
+	fileManager = "kitty -e yazi",
+	menu = "fuzzel",
+	browser = "librewolf",
 	wallpicker = "waypaper",
 	codeEditor = "kitty -e nvim",
+      logoutApp = "wlogout",
 }

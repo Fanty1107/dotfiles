@@ -5,7 +5,10 @@ local s = { silent = true }
 vim.g.mapleader = " "
 
 keymap("n", "<space>", "<Nop>")
-
+keymap('n', '<C-h>', '<C-w>h', {  noremap = true, silent = true })
+keymap('n', '<C-j>', '<C-w>j', {  noremap = true, silent = true })
+keymap('n', '<C-k>', '<C-w>k', {  noremap = true, silent = true })
+keymap('n', '<C-l>', '<C-w>l', {  noremap = true, silent = true })
 keymap("n", "j", function()
     return tonumber(vim.api.nvim_get_vvar("count")) > 0 and "j" or "gj"
 end, { expr = true, silent = true }) -- Move down, but use 'gj' if no count is given
@@ -31,7 +34,8 @@ local opts = { noremap = true, silent = true }
 keymap("n", "grd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- Go to definition
 keymap("n", "<leader>pu", '<cmd>lua vim.pack.update()<CR>') --update plugins
 -- File explorer
-keymap("n", "<Leader>e", '<cmd>Neotree position=float dir=/home/fanty/Programming<CR>')
+keymap("n", "<Leader>e", '<cmd>Neotree dir=%:p:h:h reveal=true position=right<CR>')
+keymap("n", "<Leader><Tab>", "<cmd>Neotree buffers<CR>")
 --keymap("n", "<Leader>e", "<cmd>Ex %:p:h<CR>") --Open Netrw in the current file dir
 -- Fuzzy picker keybinds
 keymap("n", "<leader>ff", '<cmd>FzfLua files<CR>')

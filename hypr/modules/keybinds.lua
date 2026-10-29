@@ -11,10 +11,8 @@ hl.bind(
 	mainMod .. " + SHIFT + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
---noctalia binds
-hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
-hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(Programs.logoutApp))
 
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(Programs.musicPlayer))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(Programs.codeEditor))

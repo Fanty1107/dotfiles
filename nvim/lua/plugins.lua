@@ -6,6 +6,27 @@ vim.pack.add({
 
 require('gitsigns').setup({ signcolumn = false })
 
+vim.pack.add{
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
+}
+vim.pack.add{
+    {src = 'https://github.com/ManuLinares/nvim-c3.git'},
+}
+require("c3").setup({
+      lsp = {
+    enable = true, -- Set to false to disable LSP
+    cmd = "c3_ls", -- We use https://github.com/ManuLinares/c3_ls but you can use whatever you want
+    version = "latest", -- (1)
+    compiler_path = nil, -- Custom path to c3c binary (2)
+    stdlib_path = nil, -- Custom path to C3 standard library (2)
+    format_on_save = false, -- Format buffer on save using LSP
+    log_level = nil, -- (3) "error" | "warn" | "info" | "debug" (default: "error")
+    log_path = nil, -- Custom path to log file
+  },
+  highlighting = {
+    enable_treesitter = true,
+  }
+})
 
 --mason.nvim
 vim.pack.add({
@@ -27,7 +48,7 @@ require('blink.cmp').setup({
         preset = "default",
         ["<C-space>"] = {},
         ["<C-p>"] = {},
-        ["<Tab>"] = { "select_and_accept"},
+        ["<Tab>"] = {},
         ["<S-Tab>"] = {},
         ["<C-y>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-n>"] = { "select_and_accept" },
@@ -129,7 +150,7 @@ require('nvim-treesitter').setup{
     install_dir = vim.fn.stdpath('data') .. '/site'
 }
 require('nvim-treesitter').install { 'rust', 'c', 'zig', 'cpp', 'go', 'python' }
-
+-- file explorer
 vim.pack.add({
   {
     src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
@@ -141,6 +162,11 @@ vim.pack.add({
   -- optional, but recommended
   "https://github.com/nvim-tree/nvim-web-devicons",
 })
+-- Cord
+vim.pack.add({
+    'https://github.com/vyfor/cord.nvim'
+})
+require('cord').setup{}
 --StatusBar
 vim.pack.add({
     'https://github.com/nvim-tree/nvim-web-devicons',
@@ -200,3 +226,45 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+--focus
+vim.pack.add({
+    {src ="https://github.com/nvim-focus/focus.nvim.git"},
+})
+require("focus").setup({
+    enable = true, -- Enable module
+    commands = true, -- Create Focus commands
+    autoresize = {
+        enable = true, -- Enable or disable auto-resizing of splits
+        width = 0, -- Force width for the focused window
+        height = 0, -- Force height for the focused window
+        minwidth = 0, -- Force minimum width for the unfocused window
+        minheight = 0, -- Force minimum height for the unfocused window
+        focusedwindow_minwidth = 0, --Force minimum width for the focused window
+        focusedwindow_minheight = 0, --Force minimum height for the focused window
+        height_quickfix = 10, -- Set the height of quickfix panel
+        equalise_min_cols = 0, -- Use equal splits when columns >= this value (0 = ignore)
+        equalise_min_rows = 0, -- Use equal splits when rows >= this value (0 = ignore)
+    },
+    split = {
+        bufnew = false, -- Create blank buffer for new split windows
+        tmux = false, -- Create tmux splits instead of neovim splits
+    },
+    ui = {
+        number = false, -- Display line numbers in the focussed window only
+        relativenumber = false, -- Display relative line numbers in the focussed window only
+        hybridnumber = false, -- Display hybrid line numbers in the focussed window only
+        absolutenumber_unfocussed = false, -- Preserve absolute numbers in the unfocussed windows
+
+        cursorline = true, -- Display a cursorline in the focussed window only
+        cursorcolumn = false, -- Display cursorcolumn in the focussed window only
+        colorcolumn = {
+            enable = false, -- Display colorcolumn in the foccused window only
+            list = '+1', -- Set the comma-saperated list for the colorcolumn
+        },
+        signcolumn = true, -- Display signcolumn in the focussed window only
+        winhighlight = false, -- Auto highlighting for focussed/unfocussed windows
+    }
+})
+
+
+

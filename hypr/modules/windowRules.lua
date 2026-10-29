@@ -48,7 +48,7 @@ hl.window_rule({
 	float = true,
 })
 hl.window_rule({ match = { class = "waypaper" }, float = true })
-hl.window_rule({ match = { class = "nemo" }, float = true })
+hl.window_rule({ match = { class = "thunar" }, float = true })
 hl.window_rule({ match = { class = "Spotify" }, workspace = "special:spotify" })
 hl.window_rule({ match = { initial_title = "Friends List"}, float = true})
 
